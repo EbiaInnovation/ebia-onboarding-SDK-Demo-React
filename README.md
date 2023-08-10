@@ -48,7 +48,7 @@ For other countries, it is necessary to send the photo for easy recognition.
 ### Face Recognition
 #### Parameters
 *  documento_identidad: It will ask you to upload a photograph of both the front and the back of the identity document.
-*  servicio_basico: It will ask you to upload a basic service bill.
+*  servicio_basico: It will ask you to upload a bill.
 *  pais: (EC->Ecuador, BO->Bolivia)
 *  prueba_vida: Options: PARPADEO, SONRISA, CARDINAL, BOSTEZO
 *  cedula: National identity card number
@@ -64,7 +64,7 @@ For other countries, it is necessary to send the photo for easy recognition.
 *  id_empresa: Company ID registered at ebia.com.ec
 *  token: token generated with the input of the user, through api.
 Only for Ecuador
-*  rc: Use of query to Registro Civil Ecuador
+*  rc: Use of query to public registry office (Registro Civil).
 *  huella: The first 6 digits of the fingerprint identifier. 
 
 <a name="example"></a>
