@@ -148,3 +148,6 @@ rekognitionError:
 <a name="demo"></a>
 # Demo
 * [React.js Demo](https://github.com/EbiaInnovation/ebia-onboarding-SDK-Demo-React)
+## AutoBuild example
+
+## ManualBuild example
