@@ -6,7 +6,7 @@ This is for robust face detection and face recognition. This a Node.js wrapper l
 * **[Install](#install)**
 * **[How to use](#how-to-use)**
 * **[Example](#example)**
-* **[With TypeScript](#with-typescript)**
+* **[Demo](#demo)**
 
 <a name="install"></a>
 # Install
@@ -17,19 +17,23 @@ Installing the package will build ebia-onboarding for you and download the model
 npm install ebia-onboarding
 ```
 
-##  Manual build - Library
-If you want to use an own build of <a href="https://www.ebia.com.ec/assets/rekognition/react-ebia.js"><b>ebia-onboarding</b></a>:
+##  ManualBuild - Library
+If you want to use an own build of <a href="https://www.ebia.com.ec/assets/rekognition/react-ebia.js"><b>ebia-onboarding</b></a> include this references:
+``` javascript
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+<script crossorigin src="https://unpkg.com/babel-transform-in-browser@6.4.6/dist/btib.min.js"></script>
 <script src="https://www.ebia.com.ec/assets/rekognition/react-ebia.js"></script>
-
-If you set these environment variables, the package will use your own build instead of compiling ebia-onboarding:
-``` bash
-npm install ebia-onboarding
 ```
+
 <a name="how-to-use"></a>
 # How to use
 
+## For AutoBuild Component
 ``` javascript
 import { EbiaOnboarding } from "ebia-onboarding";
+
 ```
 
 ## About Country
@@ -62,7 +66,7 @@ Only for Ecuador
 <a name="example"></a>
 # Example
 
-## Example of use without Registro Civil
+## Example of use without Registro Civil - AutoBuild Component
 ``` javascript
 <EbiaOnboarding
             documento_identidad={false}
@@ -83,7 +87,7 @@ Only for Ecuador
             token={"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjkxNTkyMjk1LCJleHAiOjE2OTE2Nzg2OTV9.b21NwICHH85Zm_e1lOLimsYsx8uo2BXvfPi1hShp97w"}
 />
 ```
-## Example of use with Registro Civil
+## Example of use with Registro Civil - AutoBuild Component
 ``` javascript
 <EbiaOnboarding
             cedula={"1803231727"}
@@ -101,57 +105,40 @@ Only for Ecuador
 	token={"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjkxMDk2MjYwLCJleHAiOjE2OTExODI2NjB9.xumxrHfWcBpN89QYIbEgC5it3e_m_j-CbFiYMdZnFYY"}
 />
 ```
+## Example of use with Registro Civil - ManualBuild Component
+``` javascript
+<Rekognition
+	cedula={"1704759040"}
+	nombres={"MARCO DIEGO "}
+	apellidos={"ACOSTA VASQUEZ"}
+	rc={true}
+	huella={"V4443V"}
+	prueba_vida={"SONRISA"}
+	letra_cedula={70}
+	letra_prueba_vida={50}
+	id_empresa={22}
+	id_solicitud={123456}
+	rekognitionSuccess={rekognitionSuccess}
+        rekognitionError={rekognitionError}
+        token={"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWF0IjoxNjkxMTU5NTU4LCJleHAiOjE2OTEyNDU5NTh9.sWYA1l8ZfMuebhq5PNGynko15JhzT--gDdjSUoXjWEw"}
+				/>
+```
 example output (the lower the distance, the higher the similarity):
 ``` javascript
-[
+rekognitionSuccess (response)
+data:
   {
-    className: 'sheldon',
-    distance: 0.5
-  },
-  {
-    className: 'raj',
-    distance: 0.8
-  },
-  {
-    className: 'howard',
-    distance: 0.7
+    captura:"https://ebia-rekognition.s3.amazonaws.com/capturas/undefined/10566/R/1691684378072.jpg"
+    rekognition: "eyJTaW1pbGFyaXR5Ijo5OS45OTk2ODcxOTQ4MjQyMiwiRmFjZSI6eyJCb3VuZGluZ0JveCI6eyJXaWR0aCI6MC4yNzMxNzM0ODEyMjU5Njc0LCJIZWlnaHQiOjAuMzgyODA2MzYwNzIxNTg4MTMsIkxlZnQiOjAuNDA3OTA5ODcwMTQ3NzA1MSwiVG9wIjowLjI4MTM2NDczODk0MTE5MjZ9LCJDb25maWRlbmNlIjo5OS45OTk3MjUzNDE3OTY4OCwiTGFuZG1hcmtzIjpbeyJUeXBlIjoiZXllTGVmdCIsIlgiOjAuNDk1NTQ3ODAxMjU2MTc5OCwiWSI6MC40MzY0MDI5NDY3MTA1ODY1NX0seyJUeXBlIjoiZXllUmlnaHQiLCJYIjowLjYxODk5MTQ5NDE3ODc3MiwiWSI6MC40MzM3OTExNjA1ODM0OTYxfSx7IlR5cGUiOiJtb3V0aExlZnQiLCJYIjowLjUxMjk3ODI1NTc0ODc0ODgsIlkiOjAuNTcyNDQ3Mjk5OTU3Mjc1NH0seyJUeXBlIjoibW91dGhSaWdodCIsIlgiOjAuNjE1NjQzNTYwODg2MzgzMSwiWSI6MC41NzAwOTU1MzkwOTMwMTc2fSx7IlR5cGUiOiJub3NlIiwiWCI6MC41NzA2NTc0OTE2ODM5NiwiWSI6MC40OTkzNDgwMTQ1OTMxMjQ0fV0sIlBvc2UiOnsiUm9sbCI6LTEuMzY0NTgyMDYxNzY3NTc4MSwiWWF3Ijo1LjA5ODc4NzMwNzczOTI1OCwiUGl0Y2giOjYuOTAyMDM2NjY2ODcwMTE3fSwiUXVhbGl0eSI6eyJCcmlnaHRuZXNzIjo3MC4zMzMyNTk1ODI1MTk1MywiU2hhcnBuZXNzIjo4OS44NTQ4MTI2MjIwNzAzMX19fQ=="
   }
-]
 ```
+The output rekognition has the pdf file of the facial recognition performed as base 64.
+* [Rekognition_PDF Demo](https://ebia-documentos-digitales.s3.amazonaws.com/0990633436001/ONE-SHOT/1307314359/309903/EXTRA-DOCUMENT/2023/8/10/EXTRA_DOCUMENT.pdf)
 
-Or immediately get the best result:
+rekognitionError:
 ``` javascript
-const bestPrediction = recognizer.predictBest(sheldonFaceImage)
-console.log(bestPrediction)
-```
 
-example output:
-``` javascript
-{
-  className: 'sheldon',
-  distance: 0.5
-}
 ```
-
-Save a trained model to json file:
-``` javascript
-const fs = require('fs')
-const modelState = recognizer.serialize()
-fs.writeFileSync('model.json', JSON.stringify(modelState))
-```
-
-Load a trained model from json file:
-``` javascript
-const modelState = require('model.json')
-recognizer.load(modelState)
-```
-
-### Simple Example Component Autobuild
-
-This time using the FrontalFaceDetector (you can also use FaceDetector):
-``` javascript
-const detector = new fr.FrontalFaceDetector()
-```
-
-fr.hitEnterToContinue()
-```
+<a name="demo"></a>
+# Demo
+* [React.js Demo](https://github.com/AI-Innovator/Face-Recognition-SDK-Demo-React)
