@@ -139,7 +139,7 @@ data:
 ![rekognition_sample](https://www.ebia.com.ec/assets/img/products/document_rekognition_sample.png)
 
 The output rekognition has the pdf file of the facial recognition performed as base 64.
-* [Rekognition_PDF Demo](https://ebia-documentos-digitales.s3.amazonaws.com/0990633436001/ONE-SHOT/1307314359/309903/EXTRA-DOCUMENT/2023/8/10/EXTRA_DOCUMENT.pdf)
+* [Rekognition_PDF Demo](https://ebia-documentos-digitales.s3.amazonaws.com/0990633436001/ONE-SHOT/0931427785/309089/EXTRA-DOCUMENT/2023/8/10/EXTRA_DOCUMENT.pdf)
 
 rekognitionError:
 ``` javascript
