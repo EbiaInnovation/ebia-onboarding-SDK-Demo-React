@@ -1,3 +1,7 @@
+<p align="center">
+<img src="https://ebia.com.ec/assets/img/logo-black.png" height="200"/>
+</p>
+
 # EBIA ONBOARDING
 ***
 This is for robust face detection and face recognition. This a Node.js wrapper library for the face detection and face recognition tools implemented from [Ebia Solutions](https://www.ebia.com.ec/).
@@ -132,6 +136,8 @@ data:
     rekognition: "eyJTaW1pbGFyaXR5Ijo5OS45OTk2ODcxOTQ4MjQyMiwiRmFjZSI6eyJCb3VuZGluZ0JveCI6eyJXaWR0aCI6MC4yNzMxNzM0ODEyMjU5Njc0LCJIZWlnaHQiOjAuMzgyODA2MzYwNzIxNTg4MTMsIkxlZnQiOjAuNDA3OTA5ODcwMTQ3NzA1MSwiVG9wIjowLjI4MTM2NDczODk0MTE5MjZ9LCJDb25maWRlbmNlIjo5OS45OTk3MjUzNDE3OTY4OCwiTGFuZG1hcmtzIjpbeyJUeXBlIjoiZXllTGVmdCIsIlgiOjAuNDk1NTQ3ODAxMjU2MTc5OCwiWSI6MC40MzY0MDI5NDY3MTA1ODY1NX0seyJUeXBlIjoiZXllUmlnaHQiLCJYIjowLjYxODk5MTQ5NDE3ODc3MiwiWSI6MC40MzM3OTExNjA1ODM0OTYxfSx7IlR5cGUiOiJtb3V0aExlZnQiLCJYIjowLjUxMjk3ODI1NTc0ODc0ODgsIlkiOjAuNTcyNDQ3Mjk5OTU3Mjc1NH0seyJUeXBlIjoibW91dGhSaWdodCIsIlgiOjAuNjE1NjQzNTYwODg2MzgzMSwiWSI6MC41NzAwOTU1MzkwOTMwMTc2fSx7IlR5cGUiOiJub3NlIiwiWCI6MC41NzA2NTc0OTE2ODM5NiwiWSI6MC40OTkzNDgwMTQ1OTMxMjQ0fV0sIlBvc2UiOnsiUm9sbCI6LTEuMzY0NTgyMDYxNzY3NTc4MSwiWWF3Ijo1LjA5ODc4NzMwNzczOTI1OCwiUGl0Y2giOjYuOTAyMDM2NjY2ODcwMTE3fSwiUXVhbGl0eSI6eyJCcmlnaHRuZXNzIjo3MC4zMzMyNTk1ODI1MTk1MywiU2hhcnBuZXNzIjo4OS44NTQ4MTI2MjIwNzAzMX19fQ=="
   }
 ```
+![rekognition_sample](https://www.ebia.com.ec/assets/img/products/document_rekognition_sample.png)
+
 The output rekognition has the pdf file of the facial recognition performed as base 64.
 * [Rekognition_PDF Demo](https://ebia-documentos-digitales.s3.amazonaws.com/0990633436001/ONE-SHOT/1307314359/309903/EXTRA-DOCUMENT/2023/8/10/EXTRA_DOCUMENT.pdf)
 
@@ -141,4 +147,4 @@ rekognitionError:
 ```
 <a name="demo"></a>
 # Demo
-* [React.js Demo](https://github.com/AI-Innovator/Face-Recognition-SDK-Demo-React)
+* [React.js Demo](https://github.com/EbiaInnovation/ebia-onboarding-SDK-Demo-React)
